@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كل عام وأنتِ بقلبي | عيد ميلاد سعيد</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo & Amiri & Reem Kufi) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;800;900&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        roseGold: '#B76E79',
+                        deepRed: '#7A0016',
+                        champagne: '#F7E7CE',
+                        luxuryDark: '#120507',
+                        goldAccent: '#D4AF37'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                        kufi: ['Reem Kufi', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'sparkle': 'sparkle 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' }
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(0.95)' },
+                            '50%': { opacity: '1', transform: 'scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0d0305;
+            color: #fce7f3;
+            overflow-x: hidden;
+        }
+
+        /* Luxury Glassmorphism Container */
+        .glass-panel {
+            background: rgba(25, 8, 12, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(183, 110, 121, 0.15);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+        }
+
+        /* Romantic Gradient Text */
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #FFF6D6 0%, #F3E5AB 30%, #D4AF37 70%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .rose-text-gradient {
+            background: linear-gradient(135deg, #FFE4E1 0%, #F8B195 50%, #F67280 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Floating Particles Canvas */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0305;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a0d17;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B76E79;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative selection:bg-roseGold selection:text-white">
+
+    <!-- Ambient Music (Optional Play Button Provided in Header) -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-wedding-114144.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Canvas for Floating Heart & Sparkle Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ==================== LOCK SCREEN SCREEN ==================== -->
+    <div id="lock-screen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gradient-to-br from-[#1a0509] via-[#0d0305] to-[#28050b] transition-all duration-1000">
+        <div class="glass-panel w-full max-w-md p-8 sm:p-10 rounded-3xl text-center relative overflow-hidden transform transition-all duration-500 hover:scale-[1.01]">
+            
+            <!-- Glow Background Circle -->
+            <div class="absolute -top-20 -left-20 w-40 h-40 bg-roseGold/20 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-goldAccent/20 rounded-full blur-3xl"></div>
+
+            <!-- Icon -->
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-deepRed to-roseGold p-0.5 shadow-lg shadow-roseGold/30 flex items-center justify-center animate-pulse-slow">
+                <div class="w-full h-full bg-[#120507] rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-lock text-3xl gold-text-gradient"></i>
+                </div>
+            </div>
+
+            <!-- Header Text -->
+            <h2 class="text-3xl font-extrabold gold-text-gradient mb-2 font-kufi">بوابة عالمنا الخاص</h2>
+            <p class="text-rose-200/80 text-sm mb-8">أهلاً بكِ يا أميرتي.. يُرجى إدخال كلمة السر للدخول إلى عالمك المفاجئ ✨</p>
+
+            <!-- Password Form -->
+            <form id="login-form" onsubmit="checkPassword(event)" class="space-y-5">
+                <div class="relative">
+                    <input type="password" id="pass-input" placeholder="اليوم / الشهر / السنة (مثلاً 10/11/2008)" 
+                           class="w-full text-center px-4 py-3.5 rounded-xl bg-black/50 border border-roseGold/40 text-rose-100 placeholder-rose-300/40 focus:outline-none focus:border-goldAccent focus:ring-2 focus:ring-goldAccent/30 transition-all text-lg font-mono">
+                    <button type="button" onclick="togglePasswordVisibility()" class="absolute left-3 top-1/2 -translate-y-1/2 text-rose-300/60 hover:text-rose-200">
+                        <i id="eye-icon" class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Error Message -->
+                <p id="error-msg" class="text-rose-400 text-sm hidden flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-exclamation"></i> كلمة السر غير صحيحة يا حلوتي.. تذكري تاريخ ميلادك المميز!
+                </p>
+
+                <button type="submit" 
+                        class="w-full py-4 rounded-xl bg-gradient-to-r from-deepRed via-roseGold to-goldAccent text-white font-bold text-lg shadow-lg shadow-deepRed/50 hover:opacity-95 hover:shadow-roseGold/50 transition-all transform active:scale-95 flex items-center justify-center gap-2">
+                    <span>افتحي البوابة</span>
+                    <i class="fa-solid fa-heart text-white animate-bounce"></i>
+                </button>
+            </form>
+
+            <p class="text-xs text-rose-300/40 mt-6 font-mono">Hint: 10/11/2008</p>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN BIRTHDAY WEBSITE ==================== -->
+    <div id="main-content" class="hidden min-h-screen opacity-0 transition-opacity duration-1000 relative z-10 pb-20">
+        
+        <!-- TOP NAVIGATION / HEADER CONTROL -->
+        <header class="sticky top-0 z-40 bg-black/40 backdrop-blur-md border-b border-roseGold/20 px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-crown text-goldAccent text-xl animate-bounce"></i>
+                <span class="font-kufi text-xl font-bold gold-text-gradient">عيد ميلاد أميرتي</span>
+            </div>
+            
+            <button id="music-toggle" onclick="toggleMusic()" class="px-4 py-2 rounded-full glass-panel border border-roseGold/30 text-xs sm:text-sm text-rose-200 flex items-center gap-2 hover:border-goldAccent transition-all">
+                <i id="music-icon" class="fa-solid fa-music text-roseGold"></i>
+                <span id="music-text">تشغيل الموسيقى 🎵</span>
+            </button>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-4 py-16 overflow-hidden">
+            <!-- Background Decorative Glow -->
+            <div class="absolute w-96 h-96 bg-roseGold/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="inline-block mb-4 px-6 py-2 rounded-full border border-goldAccent/40 bg-goldAccent/10 text-goldAccent text-sm font-semibold tracking-wide shadow-inner">
+                🎂 10 نوفمبر 2008 — اليوم الأجمل في السنة
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black font-kufi leading-tight mb-6 gold-text-gradient">
+                كل عام وأنتِ ملائكيتي <br/>وحبيبتي وأجمل أميرة ❤️
+            </h1>
+
+            <p class="max-w-2xl text-lg sm:text-xl text-rose-100/90 leading-relaxed font-light mb-10">
+                في هذا اليوم العظيم، أشرقت الدنيا بنوركِ. هديتي لكِ ليست مجرد كلمات، بل نبضات قلب صُممت لكِ بكل حب وشغف.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="triggerConfetti()" class="px-8 py-4 rounded-full bg-gradient-to-r from-deepRed to-roseGold text-white font-bold text-lg shadow-xl shadow-roseGold/30 hover:scale-105 transition-all flex items-center gap-3">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>إطلاق الاحتفال 🥳</span>
+                </button>
+
+                <a href="#post-section" class="px-8 py-4 rounded-full glass-panel text-rose-200 border border-roseGold/40 font-semibold text-lg hover:bg-roseGold/20 transition-all flex items-center gap-2">
+                    <span>قراءة رسالة الحب</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- COUNTDOWN / MEMORY HIGHLIGHT -->
+        <section class="max-w-4xl mx-auto px-4 mb-20">
+            <div class="glass-panel p-6 sm:p-8 rounded-3xl text-center relative overflow-hidden">
+                <h3 class="text-xl sm:text-2xl font-bold font-kufi text-goldAccent mb-6">عداد الفرح والعمر الجميل ✨</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="countdown-timer">
+                    <div class="p-4 rounded-2xl bg-black/40 border border-roseGold/20">
+                        <span id="years-val" class="block text-3xl sm:text-4xl font-extrabold gold-text-gradient font-mono">16</span>
+                        <span class="text-xs text-rose-300/70">سنة من الجمال</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/40 border border-roseGold/20">
+                        <span id="months-val" class="block text-3xl sm:text-4xl font-extrabold gold-text-gradient font-mono">192</span>
+                        <span class="text-xs text-rose-300/70">شهراً من الحب</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/40 border border-roseGold/20">
+                        <span id="days-val" class="block text-3xl sm:text-4xl font-extrabold gold-text-gradient font-mono">5844+</span>
+                        <span class="text-xs text-rose-300/70">يوماً نورتِ الأرض</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/40 border border-roseGold/20">
+                        <span id="infinity-val" class="block text-3xl sm:text-4xl font-extrabold gold-text-gradient font-mono">∞</span>
+                        <span class="text-xs text-rose-300/70">حب لا ينتهي</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BIRTHDAY POST (20 LINES) ==================== -->
+        <section id="post-section" class="max-w-4xl mx-auto px-4 mb-28">
+            <div class="text-center mb-10">
+                <span class="text-goldAccent font-serif italic text-lg">My Heartfelt Letter</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1">بوست عيد ميلادك (20 سطر من العشق)</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-goldAccent to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- 20 Lines Post Container -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl relative leading-loose border-roseGold/30 shadow-2xl">
+                <!-- Decorative Quotes -->
+                <i class="fa-solid fa-quote-right text-4xl sm:text-6xl text-goldAccent/10 absolute top-6 right-6"></i>
+                <i class="fa-solid fa-quote-left text-4xl sm:text-6xl text-goldAccent/10 absolute bottom-6 left-6"></i>
+
+                <ol class="space-y-4 text-base sm:text-xl font-amiri text-rose-100/95 leading-relaxed text-right list-decimal list-inside marker:text-goldAccent marker:font-bold">
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">في العاشر من نوفمبر، لم يكن مجرد يوم عابر، بل كان تاريخاً أشرقت فيه شمس حياتي.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">كل عام وأنتِ يا أجمل ملاك في الكون بألف خير، ونعمة، وراحة بال لا تفيض.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">أنتِ اللوحة الجميلة التي رسمها القدر في أيامي لتملأ حياتي بالألوان والبهجة.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">في عيد ميلادكِ، أدعو الله أن يحفظ تلك الابتسامة التي تشفي كل أوجاعي.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">أنتِ لستِ فقط حبيبتي، بل أنتِ موطني، وأماني، وملجئي حين يضيق هذا العالم.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">كل ثانية وأنا أحبكِ أكثر من الثواني التي سبقتها، بعشقٍ لا يعرف النهاية.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">وجودكِ في حياتي هو أكبر هدية ونعمة أشكر الله عليها في كل وقت وحين.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">يا من تملكين أرق قلب وأجمل عيون، دمتِ لي شيئاً جميلاً لا ينتهي أبداً.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">معكِ عرفتُ كيف يكون للحب طعمٌ آخَر، وكيف تتحول الحياة إلى حلم وردي.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">في هذا اليوم المميز، أتمنى لكِ تحقيق كل أمنية صغيرة وكبيرة يطمح لها قلبكِ.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">أنتِ القصة الجميلة التي أفتخر بروايتها، وأنتِ السعادة التي طالما انتظرستها.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">ضحكتكِ يا أميرتي هي الموسيقى الأحب لروحي، وصوتكِ هدوء لقلبي الثائر.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">كبرتِ عاماً في العمر، وكبر في قلبي حبكِ أضعافاً مضاعفة لا تُعد ولا تُحصى.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">سأظل دائماً بجانبكِ، سندكِ، حمايتكِ، ورجُلكِ الذي يقدم سعادتكِ على كل شيء.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">عشقتكِ أمس، وأعشقكِ اليوم، وسأعشقكِ حتى ينسى العشق معناه.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">جمالكِ النادر يجعل من كل الأشياء حولك تبدو باهتة ولا معنى لها بدونك.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">دمتِ لي حبيبةً، وصديقةً، وأميرةً تتوج على عرش قلبي طوال سنوات العمر.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">أعدكِ أن أصنع من كل يوم في حياتكِ عيداً، وأرسم الفرحة دائماً على وجهكِ.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">يا زهرة تفتح في بستان أيامي، كل عام وأنتِ الحب الوحيد والأبدي.</li>
+                    <li class="pr-2 pb-1">أحبكِ جداً بحجم هذا الكون وأكثر.. عيد ميلاد سعيد يا ملاكي الخاص ❤️✨</li>
+                </ol>
+
+                <div class="mt-8 text-center">
+                    <button onclick="sendLoveEffect()" class="px-6 py-3 rounded-full bg-roseGold/20 hover:bg-roseGold/40 border border-roseGold/50 text-rose-200 transition-all text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-red-500 animate-ping"></i>
+                        <span>اضغطي لإرسال نبضة حب الآن</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PHOTO GALLERY (5 PHOTOS & CAPTIONS) ==================== -->
+        <section class="max-w-6xl mx-auto px-4 mb-24">
+            <div class="text-center mb-12">
+                <span class="text-goldAccent font-serif italic text-lg">Memories & Sweet Words</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1">معرض ألبوماتنا الجميل 📸</h2>
+                <p class="text-rose-200/70 text-sm mt-2">اضغطي على أي صورة لتكبيرها، أو يمكنكِ استبدال الصور بسهولة من الزر أدناه</p>
+                
+                <div class="mt-4">
+                    <label for="custom-file-upload" class="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-black/50 border border-goldAccent/40 text-goldAccent text-xs hover:bg-goldAccent/10 transition-all">
+                        <i class="fa-solid fa-upload"></i>
+                        <span>تغيير الصور بصوركم الحقيقية</span>
+                    </label>
+                    <input id="custom-file-upload" type="file" multiple accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+                </div>
+            </div>
+
+            <!-- Grid of 5 Photos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                
+                <!-- Photo 1 -->
+                <div class="glass-panel p-4 rounded-3xl group hover:border-goldAccent/60 transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80" 
+                             alt="Memory 1" 
+                             class="gallery-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-xs text-goldAccent font-semibold"><i class="fa-solid fa-magnifying-glass-plus ml-1"></i> اضغطي لتكبير الصورة</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg text-rose-100 mb-1 font-kufi">أميرة قلبي الأولى 🌹</h4>
+                        <p class="text-sm text-rose-200/80 font-amiri leading-relaxed">"أول ما رأيتُ عينيكِ، علمتُ أنني ولدتُ من جديد وأنكِ مستقبلي الأجمل."</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="glass-panel p-4 rounded-3xl group hover:border-goldAccent/60 transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" 
+                             alt="Memory 2" 
+                             class="gallery-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-xs text-goldAccent font-semibold"><i class="fa-solid fa-magnifying-glass-plus ml-1"></i> اضغطي لتكبير الصورة</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg text-rose-100 mb-1 font-kufi">ضحكتكِ تضيء دنيتي 💫</h4>
+                        <p class="text-sm text-rose-200/80 font-amiri leading-relaxed">"ضحكتكِ ليست مجرد ملامح جميلة، بل هي ملجئي الوحيد وسط هذا العالم الحافل."</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="glass-panel p-4 rounded-3xl group hover:border-goldAccent/60 transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80" 
+                             alt="Memory 3" 
+                             class="gallery-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-xs text-goldAccent font-semibold"><i class="fa-solid fa-magnifying-glass-plus ml-1"></i> اضغطي لتكبير الصورة</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg text-rose-100 mb-1 font-kufi">لحظاتنا الدافئة 💖</h4>
+                        <p class="text-sm text-rose-200/80 font-amiri leading-relaxed">"كل لحظة أقضيها بقربكِ تُكتب في تاريخ حياتي كأجمل الذكريات التي لا تُنسى."</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="glass-panel p-4 rounded-3xl group hover:border-goldAccent/60 transition-all duration-500 transform hover:-translate-y-2 lg:col-span-1">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" 
+                             alt="Memory 4" 
+                             class="gallery-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-xs text-goldAccent font-semibold"><i class="fa-solid fa-magnifying-glass-plus ml-1"></i> اضغطي لتكبير الصورة</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg text-rose-100 mb-1 font-kufi">سندكِ للأبد 💍</h4>
+                        <p class="text-sm text-rose-200/80 font-amiri leading-relaxed">"سأكون لكِ دائماً الأمان، الحماية، والأيدي التي لا تفلت يديكِ أبداً."</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="glass-panel p-4 rounded-3xl group hover:border-goldAccent/60 transition-all duration-500 transform hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                             alt="Memory 5" 
+                             class="gallery-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-xs text-goldAccent font-semibold"><i class="fa-solid fa-magnifying-glass-plus ml-1"></i> اضغطي لتكبير الصورة</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg text-rose-100 mb-1 font-kufi">عيد ميلاد الأمل 🎁</h4>
+                        <p class="text-sm text-rose-200/80 font-amiri leading-relaxed">"كل عام وأنتِ بخير يا وجه الخير، أتمنى لكِ سنة مليئة بالفرح والنجاح ومزيداً من حبنا."</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER LOVE MESSAGE -->
+        <footer class="text-center px-4 py-8 border-t border-roseGold/20">
+            <p class="text-rose-200/70 text-sm font-kufi">
+                صُنع بكُل حُب وشغف من أجل أحلى وأغلى إنسانة في الوجود ❤️ | 10/11/2008
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-goldAccent transition-all">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Zoomed Memory" class="max-w-full max-h-[85vh] rounded-2xl border-2 border-goldAccent/50 shadow-2xl object-contain" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Password logic - target: 10/11/2008
+        function checkPassword(e) {
+            e.preventDefault();
+            const input = document.getElementById('pass-input').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            
+            // Clean inputs to allow multiple formats (e.g. 10/11/2008, 10-11-2008, 10112008)
+            const cleanInput = input.replace(/[\/\-\.\s]/g, '');
+            const targetPassword = "10112008";
+
+            if (cleanInput === targetPassword) {
+                // Unlock Animation
+                const lockScreen = document.getElementById('lock-screen');
+                const mainContent = document.getElementById('main-content');
+                
+                lockScreen.classList.add('scale-110', 'opacity-0');
+                
+                setTimeout(() => {
+                    lockScreen.style.display = 'none';
+                    mainContent.classList.remove('hidden');
+                    
+                    // Trigger fade in
+                    setTimeout(() => {
+                        mainContent.classList.remove('opacity-0');
+                        triggerConfetti();
+                        startParticleAnimation();
+                        // Auto play bg music if allowed by browser
+                        playMusic();
+                    }, 50);
+                }, 800);
+            } else {
+                errorMsg.classList.remove('hidden');
+                // Shake effect on form
+                const form = document.getElementById('login-form');
+                form.classList.add('animate-bounce');
+                setTimeout(() => form.classList.remove('animate-bounce'), 600);
+            }
+        }
+
+        function togglePasswordVisibility() {
+            const input = document.getElementById('pass-input');
+            const icon = document.getElementById('eye-icon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Music Toggle Controls
+        let isPlaying = false;
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtnText = document.getElementById('music-text');
+        const musicIcon = document.getElementById('music-icon');
+
+        function playMusic() {
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicBtnText.textContent = "إيقاف الموسيقى 🎵";
+                musicIcon.classList.add('animate-spin');
+            }).catch(() => {
+                // Autoplay blocked by browser policy
+                isPlaying = false;
+            });
+        }
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+                musicBtnText.textContent = "تشغيل الموسيقى 🎵";
+                musicIcon.classList.remove('animate-spin');
+            } else {
+                playMusic();
+            }
+        }
+
+        // Confetti Burst Trigger
+        function triggerConfetti() {
+            if (typeof confetti === 'function') {
+                // Multi-stage confetti celebration
+                var count = 200;
+                var defaults = {
+                    origin: { y: 0.7 }
+                };
+
+                function fire(particleRatio, opts) {
+                    confetti(Object.assign({}, defaults, opts, {
+                        particleCount: Math.floor(count * particleRatio)
+                    }));
+                }
+
+                fire(0.25, {
+                    spread: 26,
+                    startVelocity: 55,
+                    colors: ['#B76E79', '#D4AF37', '#ffffff']
+                });
+                fire(0.2, {
+                    spread: 60,
+                    colors: ['#7A0016', '#F7E7CE']
+                });
+                fire(0.35, {
+                    spread: 100,
+                    decay: 0.91,
+                    scalar: 0.8
+                });
+                fire(0.1, {
+                    spread: 120,
+                    startVelocity: 25,
+                    decay: 0.92,
+                    colors: ['#E6C280', '#F67280']
+                });
+            }
+        }
+
+        // Lightbox Functions
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        // Dynamic Image Upload Handling
+        function handleImageUpload(event) {
+            const files = event.target.files;
+            if (!files || files.length === 0) return;
+
+            const galleryImgs = document.querySelectorAll('.gallery-img');
+            for (let i = 0; i < Math.min(files.length, galleryImgs.length); i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    galleryImgs[i].src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Send Love Heart Rain Effect
+        function sendLoveEffect() {
+            triggerConfetti();
+            
+            // Create temporary floating hearts
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '❤️';
+                    heart.className = 'fixed text-2xl z-50 pointer-events-none transition-all duration-1000';
+                    heart.style.left = (Math.random() * 80 + 10) + 'vw';
+                    heart.style.bottom = '0px';
+                    heart.style.opacity = '1';
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => {
+                        heart.style.transform = `translateY(-${Math.random() * 400 + 300}px) scale(1.5)`;
+                        heart.style.opacity = '0';
+                    }, 50);
+
+                    setTimeout(() => heart.remove(), 1200);
+                }, i * 100);
+            }
+        }
+
+        // Canvas Heart & Sparkle Particle System
+        function startParticleAnimation() {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const particles = [];
+            const particleCount = 35;
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height + Math.random() * 100;
+                    this.speed = Math.random() * 1.5 + 0.5;
+                    this.size = Math.random() * 12 + 6;
+                    this.opacity = Math.random() * 0.6 + 0.2;
+                    this.type = Math.random() > 0.5 ? 'heart' : 'sparkle';
+                    this.swing = Math.random() * 0.02 - 0.01;
+                    this.angle = Math.random() * Math.PI * 2;
+                }
+
+                update() {
+                    this.y -= this.speed;
+                    this.angle += this.swing;
+                    this.x += Math.sin(this.angle) * 0.5;
+
+                    if (this.y < -20) {
+                        this.reset();
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    if (this.type === 'heart') {
+                        ctx.fillStyle = '#B76E79';
+                        ctx.font = `${this.size}px serif`;
+                        ctx.fillText('♥', this.x, this.y);
+                    } else {
+                        ctx.fillStyle = '#D4AF37';
+                        ctx.font = `${this.size}px serif`;
+                        ctx.fillText('✨', this.x, this.y);
+                    }
+                    ctx.restore();
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+    </script>
+</body>
+</html>
