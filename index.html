@@ -254,7 +254,7 @@
                 <i class="fa-solid fa-quote-left text-4xl sm:text-6xl text-goldAccent/10 absolute bottom-6 left-6"></i>
 
                 <ol class="space-y-4 text-base sm:text-xl font-amiri text-rose-100/95 leading-relaxed text-right list-decimal list-inside marker:text-goldAccent marker:font-bold">
-                    <li class="pr-2 border-b border-roseGold/10 pb-2">في الاحدا عشر من نوفمبر، لم يكن مجرد يوم عابر، بل كان تاريخاً أشرقت فيه شمس حياتي.</li>
+                    <li class="pr-2 border-b border-roseGold/10 pb-2">في العاشر من نوفمبر، لم يكن مجرد يوم عابر، بل كان تاريخاً أشرقت فيه شمس حياتي.</li>
                     <li class="pr-2 border-b border-roseGold/10 pb-2">كل عام وأنتِ يا أجمل ملاك في الكون بألف خير، ونعمة، وراحة بال لا تفيض.</li>
                     <li class="pr-2 border-b border-roseGold/10 pb-2">أنتِ اللوحة الجميلة التي رسمها القدر في أيامي لتملأ حياتي بالألوان والبهجة.</li>
                     <li class="pr-2 border-b border-roseGold/10 pb-2">في عيد ميلادكِ، أدعو الله أن يحفظ تلك الابتسامة التي تشفي كل أوجاعي.</li>
@@ -382,6 +382,569 @@
                 </div>
 
             </div>
+        </section>
+<!-- ==================== ENVELOPE / SECRET LETTER SECTION ==================== -->
+        <section class="max-w-3xl mx-auto px-4 mb-24 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">Special Birthday Gift</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-kufi text-rose-100 mt-1">جواب خاص لأميرتي جنات 💌</h2>
+                <p class="text-rose-200/70 text-sm mt-2">اضغطي على الختم الأحمر لفتح الرسالة السرية المخصصة لكِ</p>
+            </div>
+
+            <!-- Envelope Card -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl relative flex flex-col items-center justify-center border border-roseGold/40 shadow-2xl bg-gradient-to-b from-[#250a10] to-[#120407]">
+                
+                <!-- Envelope Body Graphic -->
+                <div class="relative w-64 sm:w-80 h-44 sm:h-52 bg-[#3b0b14] rounded-2xl border-2 border-goldAccent/40 flex flex-col items-center justify-center shadow-2xl overflow-hidden cursor-pointer group" onclick="openJanatModal()">
+                    <!-- Envelope Flap Top Design -->
+                    <div class="absolute top-0 left-0 right-0 h-0 border-l-[128px] sm:border-l-[160px] border-l-transparent border-r-[128px] sm:border-r-[160px] border-r-transparent border-t-[90px] sm:border-t-[110px] border-t-[#4a0d19] z-10"></div>
+
+                    <!-- Decorative Golden Lines -->
+                    <div class="absolute inset-2 border border-goldAccent/20 rounded-xl pointer-events-none"></div>
+                    <div class="text-rose-200/40 text-xs font-mono tracking-widest uppercase mb-4 z-0">FOR MY LOVE JANAT</div>
+
+                    <!-- RED WAX SEAL WITH "جنات" -->
+                    <div class="wax-seal z-20 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-red-600 via-red-800 to-rose-950 border-2 border-goldAccent/70 flex items-center justify-center cursor-pointer shadow-2xl transform active:scale-95 animate-pulse">
+                        <div class="w-full h-full rounded-full border border-red-400/30 flex flex-col items-center justify-center">
+                            <span class="text-goldAccent font-kufi font-black text-xl sm:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">جنات</span>
+                            <i class="fa-solid fa-heart text-red-300 text-[10px] mt-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-rose-200/80 text-sm mt-6 font-kufi animate-bounce">
+                    ✨ اضغطي على الختم الأحمر لقراءة الـ 30 سطر ✨
+                </p>
+            </div>
+        </section>
+
+    <!-- ==================== JANAT 30 LINES MODAL ==================== -->
+    <div id="janat-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-all duration-500 opacity-0">
+        <div class="glass-panel w-full max-w-3xl max-h-[90vh] p-6 sm:p-10 rounded-3xl relative flex flex-col overflow-hidden border-2 border-goldAccent/40 shadow-2xl">
+            
+            <!-- Close Button -->
+            <button onclick="closeJanatModal()" class="absolute top-4 left-4 w-10 h-10 rounded-full bg-black/50 border border-roseGold/40 text-rose-200 hover:text-white hover:border-goldAccent flex items-center justify-center transition-all z-20">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center mb-6 pb-4 border-b border-roseGold/20">
+                <span class="text-goldAccent text-xs sm:text-sm font-semibold tracking-widest uppercase">To My Endless Love</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1 gold-text-gradient">حبيبتي وأميرتي جنات ❤️</h2>
+                <p class="text-rose-200/70 text-xs sm:text-sm mt-1">30 سطر تعبر عن مدى جمالكِ وعشقي الأبدي لكِ</p>
+            </div>
+
+            <!-- Scrollable 30 Lines Container -->
+            <div class="overflow-y-auto pr-2 custom-scrollbar space-y-3 font-amiri text-base sm:text-lg text-rose-100/95 leading-relaxed text-right">
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">1</span>
+                    <p>يا جنات القلب، في يوم ميلادكِ تبتسم الدنيا وتشرق الأيام بالنور والجمال.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">2</span>
+                    <p>اسمكِ "جنات" وليس مجرد اسم، بل أنتِ فعلاً جنة من الفرح والسلام عشت فيها أجمل أيامي.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">3</span>
+                    <p>جمالكِ ليس مجرد ملامح تسحر العين، بل هو نور روحكِ الطاهرة التي تضيء كل مكان تذهبين إليه.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">4</span>
+                    <p>أول ما رأيتُ عينيكِ، أدركتُ أن الحب الحقيقي موجود وأنني وجدتُ المأوى والأمان.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">5</span>
+                    <p>ضحكتكِ يا جنات هي النغمة الوحيدة التي تستطيع تهدئة قلبي وإزالة كل هموم الحياة.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">6</span>
+                    <p>كل عام وأنتِ الملاك الساحر الذي يعيد ترتيب أيامي بحبه ورعايته ولطفه.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">7</span>
+                    <p>أنتِ لستِ فقط حبيبتي، بل صديقتي المفضلة وسندي وعالمي الكلي.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">8</span>
+                    <p>في كل دقيقة تمر معكِ، أشعر أن العمر يبدأ من جديد بجمالٍ ورقة لا توصف.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">9</span>
+                    <p>يا أميرة قلبي، تفاصيلكِ الصغيرة هي أحب الأشياء إلى نفسي وأقربها لقلبي.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">10</span>
+                    <p>أدعو الله في عيد ميلادكِ أن يملأ حياتكِ بالسعادة، النجاح، والراحة بقدر ما أدخلتِ الفرح لعمري.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">11</span>
+                    <p>أحب طريقة اهتمامكِ، ورقّة كلامكِ، وحنانكِ الذي يحتويني دائماً في أوقات شدتي.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">12</span>
+                    <p>أنتِ الزهرة النادرة التي نبتت في قلبي وظلت تزهر حباً وعطاءً كل يوم.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">13</span>
+                    <p>إذا سألوني عن معنى السعادة، سأجيبهم دون تردد: السعادة هي وجود جنات في حياتي.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">14</span>
+                    <p>كبرتِ عاماً وأصبحتِ أشد حسناً وجمالاً، وكبرت في قلبي مكانتكِ لتتوجي ملكة متوجة.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">15</span>
+                    <p>عيناكِ بحران من الجمال والغرام، أغرق فيهما بشوق في كل مرة أنظر إليكِ.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">16</span>
+                    <p>أعدكِ أن أكون دائماً الرجل الذي يمسك بيدكِ ويرسم البسمة على وجهكِ الجميل.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">17</span>
+                    <p>حبكِ هو الوجهة والأمان، وبدونكِ تصبح الدنيا بلا طعم ولا ألوان.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">18</span>
+                    <p>يا رقيقة القلب، كل كلمة اكتبها لكِ تمثل قطرة من بحر مشاعري المشتعلة تجاهكِ.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">19</span>
+                    <p>في كل صباح يستيقظ العالم، ولكن صباحي أنا لا يبدأ إلا برؤيتكِ وسماع صوتكِ.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">20</span>
+                    <p>يا أغلى هدية أهداني إياها القدر، أدعو الله أن يحفظكِ لي طوال أعوام العمر.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">21</span>
+                    <p>جمالكِ لا يذبل، وطيبتكِ لا تنتهي، وأنا بحبكِ متيم لأبعد حدود المكان والزمان.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">22</span>
+                    <p>وجودكِ يضفي دفئاً خاصاً في كل زاوية من حياتي، ويعيد ترتيب أفكاري بسلام.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">23</span>
+                    <p>عيد ميلاد سعيد يا ملاكي، يا من جعلتِ من دنيتي حديقة مليئة بالأمل والورود.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">24</span>
+                    <p>أنتِ الحلم الذي أصبح حقيقة، والسعادة التي أعيشها في كل لحظة أكون فيها معكِ.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">25</span>
+                    <p>كل عام وأنتِ أجمل الفتيات، وأرق الكائنات، وأحب النفوس إلى قلبي على الإطلاق.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">26</span>
+                    <p>مهما كتبتُ من سطور وكلمات، ستظل معاني العشق القابعة في صدري أكبر بكثير.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">27</span>
+                    <p>ستبقين أنتِ الخيار الأول والأخير، والوجهة الوحيدة التي يرغب بها قلبي.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">28</span>
+                    <p>أشكر كل لحظة تجمعتُ فيها بكِ، وأتطلع لصنع ألف ذكرى سحرية أخرى بجانبكِ.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">29</span>
+                    <p>دمتِ لي يا جنات نبعاً للوفاء والجمال، وكل عام وأنتِ نبض قلبي وحبيبتي الوحيدة.</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-xl border border-roseGold/10 flex items-start gap-3">
+                    <span class="text-goldAccent font-bold text-sm bg-black/40 px-2 py-0.5 rounded-md">30</span>
+                    <p>أحبكِ جداً بحجم الكون والنجوم وأكثر من أي شيء في الحياة.. عيد ميلاد سعيد يا جنات! ❤️✨</p>
+                </div>
+            </div>
+
+            <!-- Modal Footer Action -->
+            <div class="mt-6 pt-4 border-t border-roseGold/20 text-center">
+                <button onclick="triggerConfetti(); closeJanatModal();" class="px-8 py-3 rounded-full bg-gradient-to-r from-deepRed to-roseGold text-white font-bold shadow-lg hover:scale-105 transition-all inline-flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-white"></i>
+                    <span>أحبك يا جنات ❤️</span>
+                </button>
+            </div>
+        </div>
+    </div>
+<!-- ==================== BIRTHDAY WISH SECTION ==================== -->
+        <section class="max-w-3xl mx-auto px-4 mb-24 text-center">
+            <div class="glass-panel p-8 sm:p-10 rounded-3xl relative flex flex-col items-center justify-center border border-roseGold/40 shadow-2xl bg-gradient-to-b from-[#250a10] to-[#120407]">
+                
+                <div class="w-16 h-16 rounded-full bg-goldAccent/20 flex items-center justify-center mb-4 border border-goldAccent/40 animate-pulse">
+                    <i class="fa-solid fa-cake-candles text-3xl gold-text-gradient"></i>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-black font-kufi gold-text-gradient mb-2">تمنّي أمنية يا جنات 🕯️✨</h3>
+                <p class="text-rose-200/80 text-sm mb-6 font-amiri">انفخي الشمعة الافتراضية وتمني أمنية من قلبك.. دعواتي كلها معاكِ!</p>
+
+                <!-- Candle Container Button -->
+                <button onclick="blowCandle()" id="candle-btn" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-deepRed via-roseGold to-goldAccent text-white font-bold text-lg shadow-xl shadow-roseGold/30 hover:scale-105 transition-all flex items-center gap-3">
+                    <i id="candle-icon" class="fa-solid fa-fire-flame-curved text-goldAccent text-xl animate-bounce"></i>
+                    <span id="candle-text">اضغطي لنفخ الشمعة وتمني الأمنية 🎂</span>
+                </button>
+
+                <!-- Wish Success Message (Hidden by default) -->
+                <div id="wish-msg" class="hidden mt-6 p-4 rounded-xl bg-black/50 border border-goldAccent/30 text-rose-100 font-amiri text-lg animate-fade-in">
+                    ✨ تم إرسال أمنيتك للسماء يا أميرتي.. يا رب كل أحلامك تتحقق وأكون أنا دايماً جنبك وسندك ❤️
+                </div>
+            </div>
+<!-- ==================== OFFICIAL LOVE CERTIFICATE SECTION ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-24 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">Official Royal Decree</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-kufi text-rose-100 mt-1">شهادة ملكية القلب الملكية 📜👑</h2>
+                <p class="text-rose-200/70 text-sm mt-2">وثيقة رسمية ومعتمدة من أعماق قلبي لأميرتي الوحيدة</p>
+            </div>
+
+            <!-- Certificate Card Frame -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden border-2 border-goldAccent/60 shadow-[0_0_40px_rgba(212,175,55,0.25)] bg-gradient-to-b from-[#1a0509] via-[#120407] to-[#250a10] text-center">
+                
+                <!-- Decorative Corners -->
+                <div class="absolute top-4 right-4 text-goldAccent text-xl">❖</div>
+                <div class="absolute top-4 left-4 text-goldAccent text-xl">❖</div>
+                <div class="absolute bottom-4 right-4 text-goldAccent text-xl">❖</div>
+                <div class="absolute bottom-4 left-4 text-goldAccent text-xl">❖</div>
+
+                <!-- Header / Crown -->
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-goldAccent/10 border border-goldAccent/40 flex items-center justify-center">
+                    <i class="fa-solid fa-crown text-goldAccent text-2xl animate-bounce"></i>
+                </div>
+
+                <h3 class="font-kufi text-xs sm:text-sm tracking-[0.2em] text-goldAccent uppercase mb-2">Republic Of True Love & Heart Administration</h3>
+                <h2 class="text-2xl sm:text-4xl font-black font-kufi gold-text-gradient mb-6">شهادة اعتماد وتتويج رسمي</h2>
+
+                <p class="text-rose-200/90 font-amiri text-lg sm:text-xl leading-loose mb-6">
+                    تشهد إدارة قلبي وروحي، وبناءً على ما أثبتته الأيام من حب وجمال وطهارة في الروح، بأنه قد تم رسمياً منح الآنسة العظيمة والأميرة المتوجة:
+                </p>
+
+                <!-- Her Name Highlighted -->
+                <div class="inline-block px-8 py-3 rounded-2xl bg-black/60 border border-goldAccent/50 shadow-lg mb-6">
+                    <span class="text-3xl sm:text-4xl font-black font-kufi gold-text-gradient tracking-wide">الملكة / جنات ❤️</span>
+                </div>
+
+                <p class="text-rose-200/90 font-amiri text-lg sm:text-xl leading-loose mb-8">
+                    لقب <span class="text-goldAccent font-bold">"مالكة عرش القلب وأجمل فتاة في الكون"</span>، وذلك تزامناً مع يوم ميلادها المجيد الموافق <span class="font-mono text-goldAccent">11/11/2008</span>. وبناءً عليه مُنحت كافة صلاحيات الحب، الحنان، والسعادة المطلقة طوال العمر.
+                </p>
+
+                <!-- Footer Signatures & Stamp -->
+                <div class="flex flex-col sm:flex-row items-center justify-between border-t border-roseGold/20 pt-6 mt-6 gap-6 text-sm">
+                    <div class="text-right font-amiri">
+                        <p class="text-rose-300/70">تاريخ الإصدار:</p>
+                        <p class="text-goldAccent font-mono font-bold">11 نوفمبر 2026</p>
+                    </div>
+
+                    <!-- Red Wax Seal Stamp Graphic -->
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-600 via-red-800 to-rose-950 border-2 border-goldAccent/70 flex flex-col items-center justify-center shadow-xl transform rotate-12">
+                        <span class="text-goldAccent font-kufi font-black text-xs">معتمد</span>
+                        <i class="fa-solid fa-heart text-red-300 text-[10px]"></i>
+                        <span class="text-white font-mono text-[9px]">APPROVED</span>
+                    </div>
+
+                    <div class="text-left font-amiri">
+                        <p class="text-rose-300/70">توقيع المحب:</p>
+                        <p class="text-goldAccent font-kufi font-bold text-lg">صاحب القلب المتيم ✍️</p>
+                    </div>
+                </div>
+
+            </div>
+<!-- ==================== 100 REASONS WHY I LOVE YOU SECTION ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-24 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">100 Reasons Of My Love</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1">100 سبب يخليني أحبك للأبد ❤️</h2>
+                <p class="text-rose-200/70 text-sm mt-2">اضغطي على الأزرار دي عشان تقرئي أسرار وعشق قلبي لكِ بالتفصيل</p>
+            </div>
+
+            <!-- Box Container -->
+            <div class="glass-panel p-6 sm:p-10 rounded-3xl relative overflow-hidden border border-roseGold/30 shadow-2xl">
+                
+                <p class="text-rose-300/80 text-sm font-amiri mb-6">اختاري رقماً واكتشفي لماذا أنتِ الملكة المتوجة في قلبي:</p>
+                
+                <!-- 5 Interactive Buttons for 100 Reasons -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-8">
+                    <button onclick="showLoveReason(1)" class="p-4 rounded-2xl bg-black/40 border border-goldAccent/30 hover:border-goldAccent hover:bg-goldAccent/20 transition-all transform hover:scale-105 flex flex-col items-center gap-2 group">
+                        <i class="fa-solid fa-heart text-red-500 text-2xl group-hover:animate-ping"></i>
+                        <span class="text-xs text-rose-200 font-mono font-bold">السبب #1</span>
+                    </button>
+
+                    <button onclick="showLoveReason(25)" class="p-4 rounded-2xl bg-black/40 border border-goldAccent/30 hover:border-goldAccent hover:bg-goldAccent/20 transition-all transform hover:scale-105 flex flex-col items-center gap-2 group">
+                        <i class="fa-solid fa-heart text-red-500 text-2xl group-hover:animate-ping"></i>
+                        <span class="text-xs text-rose-200 font-mono font-bold">السبب #25</span>
+                    </button>
+
+                    <button onclick="showLoveReason(50)" class="p-4 rounded-2xl bg-black/40 border border-goldAccent/30 hover:border-goldAccent hover:bg-goldAccent/20 transition-all transform hover:scale-105 flex flex-col items-center gap-2 group">
+                        <i class="fa-solid fa-heart text-red-500 text-2xl group-hover:animate-ping"></i>
+                        <span class="text-xs text-rose-200 font-mono font-bold">السبب #50</span>
+                    </button>
+
+                    <button onclick="showLoveReason(75)" class="p-4 rounded-2xl bg-black/40 border border-goldAccent/30 hover:border-goldAccent hover:bg-goldAccent/20 transition-all transform hover:scale-105 flex flex-col items-center gap-2 group">
+                        <i class="fa-solid fa-heart text-red-500 text-2xl group-hover:animate-ping"></i>
+                        <span class="text-xs text-rose-200 font-mono font-bold">السبب #75</span>
+                    </button>
+
+                    <button onclick="showLoveReason(100)" class="p-4 rounded-2xl bg-black/40 border border-goldAccent/30 hover:border-goldAccent hover:bg-goldAccent/20 transition-all transform hover:scale-105 flex flex-col items-center gap-2 group col-span-2 sm:col-span-1">
+                        <i class="fa-solid fa-heart text-red-500 text-2xl group-hover:animate-ping"></i>
+                        <span class="text-xs text-rose-200 font-mono font-bold">السبب #100</span>
+                    </button>
+                </div>
+
+                <!-- Display Box for Reasons -->
+                <div id="reason-display-box" class="p-6 rounded-2xl bg-gradient-to-r from-deepRed/40 via-roseGold/20 to-black/60 border border-goldAccent/50 text-center relative shadow-inner">
+                    <i class="fa-solid fa-quote-right text-goldAccent/20 text-4xl absolute top-2 right-4"></i>
+                    <p id="reason-text" class="text-rose-100 font-amiri text-lg sm:text-xl leading-relaxed">
+                        ✨ اضغطي على أي سبب بالأعلى لتقرئي سر جديد من أسرار حبي الأبدي لكِ يا جنات! ✨
+                    </p>
+                </div>
+
+            </div>
+<!-- ==================== STARRY NIGHT OF LOVE SECTION ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-24 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">Magical Constellation</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1">سماء نجومنا الخاصة ✨</h2>
+                <p class="text-rose-200/70 text-sm mt-2">كل نجمة في سماء قلبي تضيء باسمك.. اضغطي على النجوم لتكتشفي أسرارها</p>
+            </div>
+
+            <!-- Constellation Box Container -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden border border-roseGold/40 shadow-2xl bg-gradient-to-b from-[#120507] via-[#1a0509] to-[#0d0305]">
+                
+                <!-- Glowing Stars Interactive Row -->
+                <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-10 mb-10">
+                    <button onclick="revealStarMessage(1)" class="w-14 h-14 rounded-full bg-goldAccent/20 border border-goldAccent/50 flex items-center justify-center text-goldAccent hover:bg-goldAccent hover:text-black transition-all transform hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </button>
+                    <button onclick="revealStarMessage(2)" class="w-14 h-14 rounded-full bg-goldAccent/20 border border-goldAccent/50 flex items-center justify-center text-goldAccent hover:bg-goldAccent hover:text-black transition-all transform hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse" style="animation-delay: 0.5s;">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </button>
+                    <button onclick="revealStarMessage(3)" class="w-14 h-14 rounded-full bg-goldAccent/20 border border-goldAccent/50 flex items-center justify-center text-goldAccent hover:bg-goldAccent hover:text-black transition-all transform hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse" style="animation-delay: 1s;">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </button>
+                    <button onclick="revealStarMessage(4)" class="w-14 h-14 rounded-full bg-goldAccent/20 border border-goldAccent/50 flex items-center justify-center text-goldAccent hover:bg-goldAccent hover:text-black transition-all transform hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse" style="animation-delay: 1.5s;">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Message Output Screen -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-black/60 border border-goldAccent/40 text-center relative shadow-inner">
+                    <div class="absolute -top-3 right-1/2 translate-x-1/2 px-4 py-0.5 rounded-full bg-goldAccent text-black font-kufi text-xs font-bold">
+                        رسالة النجم السحري
+                    </div>
+                    <p id="star-msg-text" class="text-rose-100 font-amiri text-lg sm:text-xl leading-relaxed mt-2">
+                        🌟 اضغطي على أي نجمة من النجوم المضيئة بالأعلى لتنير لكِ رسالة خاصة من أعماق قلبي يا جنات! 🌟
+                    </p>
+                </div>
+
+            </div>
+<!-- ==================== LOVE RADIO STATION SECTION ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-24 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">Exclusive Love Broadcast</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1">إذاعة قلب جنات 📻❤️</h2>
+                <p class="text-rose-200/70 text-sm mt-2">بث حي ومباشر من أعماق روحي.. اضغطي على زر التشغيل لسماع رسالتي الإذاعية</p>
+            </div>
+
+            <!-- Radio Device Container -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden border-2 border-goldAccent/40 shadow-2xl bg-gradient-to-b from-[#1a0509] via-[#120407] to-[#250a10] max-w-xl mx-auto">
+                
+                <!-- Radio Antenna Graphic -->
+                <div class="absolute -top-10 right-1/4 w-1 h-16 bg-gradient-to-t from-goldAccent/40 to-goldAccent rotate-12 rounded-full pointer-events-none"></div>
+
+                <!-- Frequency Screen -->
+                <div class="bg-black/80 border-2 border-goldAccent/50 rounded-2xl p-4 mb-6 shadow-inner relative overflow-hidden">
+                    <div class="absolute inset-0 bg-goldAccent/5 pointer-events-none"></div>
+                    <div class="flex justify-between items-center text-xs font-mono text-goldAccent/60 mb-1">
+<span>88.8 FM</span>
+                        <span class="animate-pulse text-red-500 font-bold">● LIVE</span>
+                        <span>108.0 FM</span>
+                    </div>
+                    <!-- Frequency Bar Indicator -->
+                    <div class="h-2 bg-zinc-900 rounded-full mb-3 relative overflow-hidden border border-goldAccent/20">
+                        <div class="absolute top-0 bottom-0 left-1/3 w-3 bg-goldAccent rounded-full shadow-[0_0_10px_#D4AF37] animate-pulse"></div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-goldAccent font-mono text-sm tracking-widest font-bold">FREQUENCY: 11.11 JANAT LOVE</span>
+                    </div>
+                </div>
+
+                <!-- Animated Sound Waves (Visualizer) -->
+                <div id="sound-waves" class="flex justify-center items-end gap-1.5 h-12 mb-6 opacity-40 transition-opacity duration-300">
+                    <div class="w-1.5 bg-goldAccent rounded-full h-4 animate-pulse"></div>
+                    <div class="w-1.5 bg-goldAccent rounded-full h-8 animate-pulse" style="animation-delay: 0.2s;"></div>
+                    <div class="w-1.5 bg-goldAccent rounded-full h-12 animate-pulse" style="animation-delay: 0.4s;"></div>
+                    <div class="w-1.5 bg-goldAccent rounded-full h-6 animate-pulse" style="animation-delay: 0.1s;"></div>
+                    <div class="w-1.5 bg-goldAccent rounded-full h-10 animate-pulse" style="animation-delay: 0.3s;"></div>
+                    <div class="w-1.5 bg-goldAccent rounded-full h-5 animate-pulse" style="animation-delay: 0.5s;"></div>
+                </div>
+
+                <!-- Broadcast Message Display -->
+                <div class="p-4 rounded-xl bg-black/50 border border-roseGold/30 mb-8 min-h-[80px] flex items-center justify-center">
+                    <p id="radio-msg" class="text-rose-100 font-amiri text-base sm:text-lg leading-relaxed">
+                        🎙️ اضغطي على زر المذياع بالأسفل لبدء الاستماع إلى البث الخاص بي..
+                    </p>
+                </div>
+
+                <!-- Radio Controls / Play Button -->
+                <div class="flex justify-center items-center gap-6">
+                    <button onclick="toggleRadioPlay()" id="radio-btn" class="w-16 h-16 rounded-full bg-gradient-to-r from-deepRed via-roseGold to-goldAccent text-white text-2xl shadow-xl shadow-roseGold/40 hover:scale-110 active:scale-95 transition-all flex items-center justify-center border-2 border-goldAccent/60">
+                        <i id="radio-icon" class="fa-solid fa-play ml-1"></i>
+                    </button>
+                </div>
+                <p class="text-xs text-rose-300/60 font-mono mt-3">اضغطي للتشغيل والإيقاف</p>
+
+            </div>
+<!-- ==================== MEMORY TIMELINE MILESTONES ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-20">
+            <div class="text-center mb-10">
+                <span class="text-goldAccent font-serif italic text-lg">Our Beautiful Journey</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-kufi text-rose-100 mt-1">محطات في حبك يا جنات ⏳❤️</h2>
+                <p class="text-rose-200/70 text-sm mt-2">لحطات وأيام فارقة حولت حياتي إلى جنة حقيقية</p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="glass-panel p-6 sm:p-10 rounded-3xl relative border border-roseGold/35 shadow-xl space-y-6">
+                
+                <!-- Milestone 1: أول يوم كلام بالتاريخ -->
+                <div class="p-5 rounded-2xl bg-black/50 border border-goldAccent/30 hover:border-goldAccent transition-all">
+                    <div class="flex items-center justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-deepRed/60 border border-goldAccent/50 flex items-center justify-center shrink-0 text-goldAccent font-bold font-mono text-sm">
+                                01
+                            </div>
+                            <h4 class="text-goldAccent font-kufi text-base sm:text-lg font-bold">بداية الحكاية (أول يوم كلام)</h4>
+                        </div>
+                        <span class="text-xs font-mono text-goldAccent bg-goldAccent/10 border border-goldAccent/30 px-3 py-1 rounded-full whitespace-nowrap">21 ديسمبر 2025</span>
+                    </div>
+                    <p class="text-rose-200/90 font-amiri text-base leading-relaxed pr-2">
+                        اليوم الذي بدأ فيه كل شيء، واللحظة التي غيرت مجرى أيامي حين سمعت صوت حروفك لأول مرة.
+                    </p>
+                </div>
+
+                <!-- Milestone 2: أول ضحكة -->
+                <div class="p-5 rounded-2xl bg-black/50 border border-goldAccent/30 hover:border-goldAccent transition-all">
+                    <div class="flex items-center justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-deepRed/60 border border-goldAccent/50 flex items-center justify-center shrink-0 text-goldAccent font-bold font-mono text-sm">
+                                02
+                            </div>
+                            <h4 class="text-goldAccent font-kufi text-base sm:text-lg font-bold">أول ضحكة صافية</h4>
+                        </div>
+                    </div>
+                    <p class="text-rose-200/90 font-amiri text-base leading-relaxed pr-2">
+                        النغمة التي أصبحت لحني المفضّل والملجأ الوحيد لكل أوقاتي السعيدة.
+                    </p>
+                </div>
+
+                <!-- Milestone 3: عيد ميلادها -->
+                <div class="p-5 rounded-2xl bg-black/50 border border-goldAccent/30 hover:border-goldAccent transition-all">
+                    <div class="flex items-center justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-deepRed/60 border border-goldAccent/50 flex items-center justify-center shrink-0 text-goldAccent font-bold font-mono text-sm">
+                                03
+                            </div>
+                            <h4 class="text-goldAccent font-kufi text-base sm:text-lg font-bold">يوم ميلاد الملكة</h4>
+                        </div>
+                        <span class="text-xs font-mono text-goldAccent bg-goldAccent/10 border border-goldAccent/30 px-3 py-1 rounded-full whitespace-nowrap">11 نوفمبر 2008</span>
+                    </div>
+                    <p class="text-rose-200/90 font-amiri text-base leading-relaxed pr-2">
+                        اليوم الذي أشرقت فيه شمس الدنيا بميلاد أغلى إنسانة وأطهر قلب عرفته البشرية.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+           <!-- ==================== LIVE LOVE COUNTER SECTION ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-20 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">Our Time Together</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-kufi text-rose-100 mt-1">عمر حبنا باللحظة والثانية ⏳💖</h2>
+                <p class="text-rose-200/70 text-sm mt-2">منذ أول يوم كلام بيننا في (21 ديسمبر 2025) وحتى هذه اللحظة</p>
+            </div>
+
+            <!-- Counter Glass Container -->
+            <div class="glass-panel p-6 sm:p-10 rounded-3xl relative border-2 border-goldAccent/40 shadow-2xl bg-gradient-to-b from-[#1a0509] via-[#120407] to-[#250a10]">
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+                    <!-- Days -->
+                    <div class="p-4 rounded-2xl bg-black/60 border border-goldAccent/30 flex flex-col items-center justify-center shadow-inner">
+                        <span id="counter-days" class="text-3xl sm:text-4xl font-black font-mono text-goldAccent mb-1">0</span>
+                        <span class="text-rose-200/80 font-amiri text-sm">يوماً</span>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="p-4 rounded-2xl bg-black/60 border border-goldAccent/30 flex flex-col items-center justify-center shadow-inner">
+                        <span id="counter-hours" class="text-3xl sm:text-4xl font-black font-mono text-goldAccent mb-1">0</span>
+                        <span class="text-rose-200/80 font-amiri text-sm">ساعة</span>
+                    </div>
+
+                    <!-- Minutes -->
+                    <div class="p-4 rounded-2xl bg-black/60 border border-goldAccent/30 flex flex-col items-center justify-center shadow-inner">
+                        <span id="counter-minutes" class="text-3xl sm:text-4xl font-black font-mono text-goldAccent mb-1">0</span>
+                        <span class="text-rose-200/80 font-amiri text-sm">دقيقة</span>
+                    </div>
+
+                    <!-- Seconds -->
+                    <div class="p-4 rounded-2xl bg-black/60 border border-goldAccent/30 flex flex-col items-center justify-center shadow-inner">
+                        <span id="counter-seconds" class="text-3xl sm:text-4xl font-black font-mono text-goldAccent mb-1 animate-pulse">0</span>
+                        <span class="text-rose-200/80 font-amiri text-sm">ثانية</span>
+                    </div>
+                </div>
+
+                <p class="text-rose-100 font-amiri text-base sm:text-lg italic">
+                    «كل ثانية مرت وأنتِ في دنيتي، أعتبرها عمراً جديداً أعيشه بجانبك يا جنات ❤️»
+                </p>
+
+            </div>
+        </section>
+<!-- ==================== THE LOVE VAULT SECTION ==================== -->
+        <section class="max-w-4xl mx-auto px-4 mb-24 text-center">
+            <div class="text-center mb-8">
+                <span class="text-goldAccent font-serif italic text-lg">Final Secret Vault</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-kufi text-rose-100 mt-1">خزنة العهود الأبدية 🗝️✨</h2>
+                <p class="text-rose-200/70 text-sm mt-2">السر الأخير والعهد الأوثق الذي لا يفتح إلا بقلب جنات الملكة</p>
+            </div>
+
+            <!-- Vault Box Card -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden border-2 border-goldAccent/50 shadow-[0_0_50px_rgba(212,175,55,0.2)] bg-gradient-to-b from-[#1a0509] via-[#120407] to-[#250a10] max-w-xl mx-auto text-center">
+                
+                <!-- Vault Icon / Lock -->
+                <div id="vault-icon-container" class="w-24 h-24 mx-auto mb-6 rounded-full bg-black/60 border-2 border-goldAccent flex items-center justify-center shadow-2xl relative group cursor-pointer transition-all hover:scale-105" onclick="openLoveVault()">
+                    <i id="vault-lock-icon" class="fa-solid fa-lock text-goldAccent text-4xl animate-pulse"></i>
+                </div>
+
+                <h3 id="vault-title" class="font-kufi text-xl sm:text-2xl text-goldAccent mb-3">خزنة العشق مقفولة بانتظارك</h3>
+                <p id="vault-desc" class="text-rose-200/80 font-amiri text-base sm:text-lg mb-6 leading-relaxed">
+                    اضغطي على القفل الذهبي بالأعلى لكسر الختم وفتح الخزنة ورؤية عهدي الأبدي لكِ في يوم ميلادكِ!
+                </p>
+
+                <!-- Vault Hidden Secret Message (Hidden initially) -->
+                <div id="vault-secret-content" class="hidden p-6 rounded-2xl bg-black/80 border border-goldAccent/60 text-rose-100 font-amiri text-lg sm:text-xl leading-relaxed shadow-inner animate-fade-in">
+                    💍 «أقسم أنني سأظل أحبكِ بكل تفاصيلكِ، في قسوة الأيام ولحظات الفرح، وسأبقى سندكِ الأول وملاذكِ الآمن طوال العمر.. عيد ميلاد سعيد يا جنات يا أجمل أقدار حياتي!» ❤️✨
+                </div>
+
+                <!-- Action Button -->
+                <button id="vault-action-btn" onclick="openLoveVault()" class="mt-4 px-8 py-3 rounded-full bg-gradient-to-r from-deepRed via-roseGold to-goldAccent text-white font-bold shadow-lg hover:scale-105 transition-all inline-flex items-center gap-2 font-kufi text-sm">
+                    <i class="fa-solid fa-key text-goldAccent"></i>
+                    <span>فتح خزنة العهود</span>
+                </button>
+
+            </div>
+        </section>
+                
+               
+           
+
+          
+           
+                
+                
+                
+            
+        </section>
+        </section>
+        </section>
+        </section>
         </section>
 
         <!-- FOOTER LOVE MESSAGE -->
@@ -631,6 +1194,225 @@
             }
 
             animate();
+        }
+// Janat Modal Open/Close Functions
+        function openJanatModal() {
+            var modal = document.getElementById('janat-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                setTimeout(function() {
+                    modal.classList.remove('opacity-0');
+                }, 10);
+                if (typeof triggerConfetti === 'function') {
+                    triggerConfetti();
+                }
+            }
+        }
+
+        function closeJanatModal() {
+            var modal = document.getElementById('janat-modal');
+            if (modal) {
+                modal.classList.add('opacity-0');
+                setTimeout(function() {
+                    modal.classList.add('hidden');
+                }, 500);
+            }
+        }
+// Birthday Wish / Candle Blow Function
+        function blowCandle() {
+            const btnText = document.getElementById('candle-text');
+            const candleIcon = document.getElementById('candle-icon');
+            const wishMsg = document.getElementById('wish-msg');
+            const candleBtn = document.getElementById('candle-btn');
+
+            // Change icon to unlit candle or sparkle
+            candleIcon.className = "fa-solid fa-wand-magic-sparkles text-goldAccent text-xl";
+            btnText.innerText = "حققتِ الأمنية بنجاح! 🎉";
+            candleBtn.classList.remove('from-deepRed', 'via-roseGold');
+            candleBtn.classList.add('bg-black/60', 'border', 'border-goldAccent/50', 'cursor-default');
+            candleBtn.removeAttribute('onclick');
+
+            // Show romantic wish message
+            wishMsg.classList.remove('hidden');
+
+            // Trigger massive confetti celebration
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 150,
+                    spread: 100,
+                    origin: { y: 0.7 },
+                    colors: ['#B76E79', '#D4AF37', '#7A0016', '#FFFFFF', '#FF69B4']
+                });
+            }
+        }
+// 100 Reasons Love Box Function
+        function showLoveReason(id) {
+            const reasonText = document.getElementById('reason-text');
+            
+            const reasons = {
+                1: "«السبب #1: لأن عيونك هما المكان الوحيد اللي بحس فيه بالأمان والراحة المطلقة من أول نظرة.» ❤️",
+                25: "«السبب #25: لأن ضحكتك قادرة ترمّم كل حاجة مكسورة جوه قلبي وتخلّي الدنيا تضحكلي بكل ألوانها.» ✨",
+                50: "«السبب #50: لأن حنيتك وطريقتك الخاصة في الكلام بيخلوني أشعر إني ملكت الدنيا وما فيها.» 🌹",
+                75: "«السبب #75: لأنك مش بس حبيبتي، أنتِ نوري في الظلمات ومستقبلي الأجمل اللي بتمناه طول عمري.» 🌟",
+                100: "«السبب #100 والأخير: ببساطة، لأن قلبي اتخلق عشان ينبض بحبك أنتِ وبس يا جنات لحد آخر عمر الفرح والسرور!» 💍✨"
+            };
+
+            // Animate box change
+            reasonText.style.opacity = 0;
+            setTimeout(() => {
+                reasonText.innerText = reasons[id] || "أحبك بكل تفاصيلك وبلا حدود.. أنتِ كل شيء جميل في دنيتي ❤️";
+                reasonText.style.opacity = 1;
+            }, 200);
+
+            // Trigger light confetti
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 50,
+                    spread: 60,
+                    origin: { y: 0.8 },
+                    colors: ['#B76E79', '#D4AF37', '#FF69B4']
+                });
+            }
+        }
+// Starry Night Love Messages Function
+        function revealStarMessage(starId) {
+            const msgBox = document.getElementById('star-msg-text');
+            
+            const starMessages = {
+                1: "✨ «النجمة الأولى: أنتِ النجمة التي أضاءت عتمة أيامي وجعلتني أؤمن أن الأحلام الجميلة تتحقق حقاً.» ❤️",
+                2: "✨ «النجمة الثانية: عيناكِ هما المجرة التي أضيع فيها وأتمنى ألا أجد طريقي للخروج أبداً.» 🌌",
+                3: "✨ «النجمة الثالثة: في كل مرة أرى فيها ابتسامتك، أشعر أن الكون كله يبتسم لي ولحظاتي السعيدة معكِ.» 🌹",
+                4: "✨ «النجمة الرابعة: أقسم أنني سأظل أحبكِ وأحمي نبضكِ حتى تطفئ كل نجوم السماء ولا يبقى سوى حبنا للأبد!» 💍✨"
+            };
+
+            // Fade transition effect
+            msgBox.style.opacity = 0;
+            setTimeout(() => {
+                msgBox.innerText = starMessages[starId] || "أنتِ أملي ونجمتي الوحيدة في هذا الكون يا جنات ❤️";
+                msgBox.style.opacity = 1;
+            }, 250);
+
+            // Trigger sparkle effect
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 70,
+                    spread: 70,
+                    origin: { y: 0.75 },
+                    colors: ['#D4AF37', '#FFFFFF', '#B76E79']
+                });
+            }
+        }
+// Love Radio Station Function
+        let isRadioPlaying = false;
+        let radioInterval;
+
+        function toggleRadioPlay() {
+            const radioBtn = document.getElementById('radio-btn');
+            const radioIcon = document.getElementById('radio-icon');
+            const radioMsg = document.getElementById('radio-msg');
+            const soundWaves = document.getElementById('sound-waves');
+
+            isRadioPlaying = !isRadioPlaying;
+
+            if (isRadioPlaying) {
+                // Change icon to Pause
+                radioIcon.className = "fa-solid fa-pause";
+                soundWaves.classList.remove('opacity-40');
+                soundWaves.classList.add('opacity-100');
+                
+                const messages = [
+                    "🎙️ 'مرحباً بكم مستمعينا الأعزاء.. معكم صاحب القلب المتيم، وبثنا اليوم مخصص بالكامل لملكة الكون جنات..'",
+                    "💖 'يقال أن لكل عُمر حكاية، وحكايتي أنا اختصرتها عيونك وضحكتك اللي بتنور أيامي كلها..'",
+                    "✨ 'كل سنة وأنتِ أجمل حاجة حصلت في عمري.. دمتِ لي نبضاً لا ينتهي ولا يغيب..'",
+                    "🎶 'استمروا في الاستماع إلى تردد حبنا الأبدي.. عيد ميلاد سعيد يا أغلى البشر!'"
+                ];
+
+                let index = 0;
+                radioMsg.innerText = messages[index];
+                
+                // Rotate messages like a live broadcast
+                radioInterval = setInterval(() => {
+                    index = (index + 1) % messages.length;
+                    radioMsg.style.opacity = 0;
+                    setTimeout(() => {
+                        radioMsg.innerText = messages[index];
+                        radioMsg.style.opacity = 1;
+                    }, 300);
+                }, 4000);
+
+                // Confetti celebration
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 60, spread: 80, origin: { y: 0.8 } });
+                }
+
+            } else {
+                // Stop radio
+                radioIcon.className = "fa-solid fa-play ml-1";
+                soundWaves.classList.remove('opacity-100');
+                soundWaves.classList.add('opacity-40');
+                clearInterval(radioInterval);
+                radioMsg.innerText = "⏸️ تم إيقاف البث مؤقتاً.. اضغطي مجدداً لإعادة الاستماع للبث الحي.";
+            }
+        }
+// Live Love Counter Function starting from 21 Dec 2025
+        function updateLoveCounter() {
+            // Set start date: December 21, 2025, 00:00:00
+            const startDate = new Date('2025-12-21T00:00:00');
+            const now = new Date();
+            
+            const diff = now - startDate;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60 * 1000)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                // Update DOM elements safely
+                const daysEl = document.getElementById('counter-days');
+                const hoursEl = document.getElementById('counter-hours');
+                const minutesEl = document.getElementById('counter-minutes');
+                const secondsEl = document.getElementById('counter-seconds');
+
+                if (daysEl) daysEl.innerText = days;
+                if (hoursEl) hoursEl.innerText = hours;
+                if (minutesEl) minutesEl.innerText = minutes;
+                if (secondsEl) secondsEl.innerText = seconds;
+            }
+        }
+
+        // Run counter immediately and update every second
+        setInterval(updateLoveCounter, 1000);
+        updateLoveCounter();
+// Love Vault Open Function
+        function openLoveVault() {
+            const lockIcon = document.getElementById('vault-lock-icon');
+            const vaultTitle = document.getElementById('vault-title');
+            const vaultDesc = document.getElementById('vault-desc');
+            const secretContent = document.getElementById('vault-secret-content');
+            const actionBtn = document.getElementById('vault-action-btn');
+            const iconContainer = document.getElementById('vault-icon-container');
+
+            // Change Lock to Open Lock
+            lockIcon.className = "fa-solid fa-unlock-keyhole text-goldAccent text-4xl animate-bounce";
+            vaultTitle.innerText = "تم فتح الخزنة بنجاح يا أميرتي! 🎉";
+            vaultDesc.classList.add('hidden');
+            actionBtn.classList.add('hidden');
+            iconContainer.removeAttribute('onclick');
+            iconContainer.classList.remove('cursor-pointer', 'hover:scale-105');
+
+            // Show Secret Message
+            secretContent.classList.remove('hidden');
+
+            // Trigger Massive Confetti Fireworks
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 200,
+                    spread: 120,
+                    origin: { y: 0.6 },
+                    colors: ['#D4AF37', '#B76E79', '#FF69B4', '#FFFFFF', '#7A0016']
+                });
+            }
         }
     </script>
 </body>
